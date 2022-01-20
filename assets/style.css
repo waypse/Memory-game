@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  main {
+    height: 100vh;
+    display: flex;
+    background: #1a044e;
+    flex-direction: column;
+    color: white;
+    font-size: 1.5em;
+  }
+  
+  .memory-game {
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .memory-card {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  }
+  
+  .memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+  }
+  
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    border-radius: 5px;
+    background: #f5f7f8;
+    backface-visibility: hidden;
+  }
+  
+  .front-face {
+    transform: rotateY(180deg);
+  }
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    position: absolute;
+    border-radius: 5px;
+    background: #f5f7f8;
+    backface-visibility: hidden;
+  }
+  #new_game_button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #new_game_button button {
+      height: 30px;
+      width: 100px;
+  }
+  
+  .controls {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+  }
+  .hide {
+      display: none;
+  }
+  .popup {
+      width: 400px;
+      height: 400px;
+      margin: 300px;
+      text-align: center;
+  }
+ #chrono {
+     color: #fff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+  input {
+      width: 100px;
+      height: 30px;
+  }
